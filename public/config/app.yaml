@@ -1,0 +1,35 @@
+# Globale Einstellungen der Lernhilfe. Sprachspezifische Abweichungen stehen in languages.yaml.
+admin_pin: "2468"                        # Admin-Bereich: linke obere Ecke 3 s halten oder ⚙ auf dem Start-Screen
+
+defaults:
+  pipeline: cascade                      # cascade (STT → LLM) | audio-llm (Audio direkt ins LLM, pro Sprache umschaltbar)
+  stt:
+    model: google/gemini-3.5-transcribe
+  llm:
+    model: google/gemini-3.8-flash
+    temperature: 0.3
+    max_tokens: 400
+    reasoning_effort: minimal            # none | minimal | low | medium | high
+  tts:
+    model: x-ai/grok-voice-tts-1.0       # Sprachenmatrix 27.09.2026: alle 15 Sprachen ok
+    voice: eve
+  judge:                                 # für "Antwort prüfen" (strukturierte JSON-Ausgabe)
+    model: google/gemini-3.8-flash
+    temperature: 0
+    reasoning_effort: low
+
+flags:
+  rueckmeldung_an_person: false          # Bewertung aussprechen? Sonst neutrales "Danke". Test-YAML kann überschreiben.
+  erklaerung_cachen: true                # "Aufgabe erklären" pro Test/Aufgabe/Sprache nur einmal erzeugen
+  audio_aufnahmen_speichern: false       # Rohaudio jeder Äußerung speichern (ZIP-Export). Nur mit passender Einwilligung!
+  max_aufnahme_s: 30
+  stille_autostopp_s: 1.8                # 0 = aus
+  stille_autostopp_antwort_s: 3          # länger, weil beim Buchstabieren Pausen entstehen
+  antwort_stt_sprachhinweis: false       # false: STT ohne Sprachhinweis, sonst gehen deutsche Wörter verloren (Sprachenmatrix)
+  mikro_offen_halten: false              # true = weniger Berechtigungsabfragen, evtl. leisere Wiedergabe auf iOS
+  audio_session_steuern: true            # navigator.audioSession (Safari ≥ 16.4)
+  pause_zwischen_saetzen_ms: 250
+  sprach_schwelle: 0.02                  # Mindestpegel für Sprache (RMS); steigt in lauten Räumen automatisch
+  denk_laut_nach_s: 2.5                  # "Einen Moment, bitte", wenn so lange noch kein Ton kam; 0 = aus
+  signaltoene: true                      # kurzer Ton vor und nach der Aufnahme (sprachunabhängig)
+  debug_anzeigen: true                   # Transkript/Latenzen unter der Aufgabe (für Tests; in Sitzungen aus)

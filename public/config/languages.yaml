@@ -1,0 +1,199 @@
+# Sprachen der Sprachwahl, in dieser Reihenfolge.
+# Felder: id (BCP-47), name_eigen, name_de, iso639_1 (STT-Sprachhinweis, null = automatisch), rtl,
+#         varietaet_hinweis (für den Systemprompt), status (experimentell → Hinweis-Punkt auf der Kachel),
+#         optional stt/llm/tts (überschreiben defaults aus app.yaml), saetze (feste, vorab erzeugte Ansagen):
+#         begruessung, fehler, antwort_ansage (vor der Antwort-Aufnahme), danke (wenn keine Rückmeldung gegeben wird),
+#         moment (Denk-Laut bei langer Wartezeit).
+# ACHTUNG: Die festen Sätze sind noch NICHT muttersprachlich geprüft.
+
+- id: ar
+  name_eigen: "العربية"
+  name_de: Arabisch
+  iso639_1: ar
+  rtl: true
+  varietaet_hinweis: "Einfaches, alltagsnahes Arabisch, möglichst nah an gesprochener Sprache, kein gehobenes Hocharabisch."
+  saetze:
+    begruessung: "هل تريد العربية؟ اضغط مرة أخرى."
+    fehler: "لم ينجح ذلك. اضغط مرة أخرى."
+    antwort_ansage: "قل إجابتك. يمكنك أيضًا تهجئتها حرفًا حرفًا."
+    danke: "شكرًا. سمعت إجابتك."
+    moment: "لحظة من فضلك."
+
+- id: prs
+  name_eigen: "دری"
+  name_de: Dari
+  iso639_1: fa
+  rtl: true
+  varietaet_hinweis: "Dari, wie es in Afghanistan gesprochen wird. Kein iranisches Persisch."
+  saetze:
+    begruessung: "دری می‌خواهی؟ یک بار دیگر لمس کن."
+    fehler: "نشد. یک بار دیگر لمس کن."
+    antwort_ansage: "جوابت را بگو. می‌توانی حرف به حرف هم بگویی."
+    danke: "تشکر. جوابت را شنیدم."
+    moment: "یک لحظه صبر کن."
+
+- id: fa
+  name_eigen: "فارسی"
+  name_de: Farsi
+  iso639_1: fa
+  rtl: true
+  varietaet_hinweis: "Einfaches Persisch (Farsi), wie im Iran gesprochen."
+  saetze:
+    begruessung: "فارسی می‌خواهی؟ دوباره لمس کن."
+    fehler: "نشد. دوباره لمس کن."
+    antwort_ansage: "جوابت را بگو. می‌توانی حرف به حرف هم بگویی."
+    danke: "ممنون. جوابت را شنیدم."
+    moment: "یک لحظه صبر کن."
+
+- id: ps
+  name_eigen: "پښتو"
+  name_de: Paschto
+  iso639_1: ps
+  rtl: true
+  varietaet_hinweis: "Einfaches Paschto, wie in Afghanistan gesprochen."
+  saetze:
+    begruessung: "پښتو غواړې؟ بیا یې کېکاږه."
+    fehler: "ونه شول. بیا یې کېکاږه."
+    antwort_ansage: "خپل ځواب ووایه. ته کولی شې توري په توري یې هم ووایې."
+    danke: "مننه. ستا ځواب مې واورېد."
+    moment: "یوه شېبه صبر وکړه."
+
+- id: ti
+  name_eigen: "ትግርኛ"
+  name_de: Tigrinya
+  iso639_1: ti
+  rtl: false
+  status: experimentell
+  varietaet_hinweis: "Einfaches Tigrinya in Ge'ez-Schrift, wie in Eritrea gesprochen."
+  saetze:
+    begruessung: "ትግርኛ ትደሊ ዶ? ደጊምካ ጠውቕ።"
+    fehler: "ኣይሰርሐን። ደጊምካ ጠውቕ።"
+    antwort_ansage: "መልስኻ ተዛረብ። ፊደል ብፊደል'ውን ክትብሎ ትኽእል ኢኻ።"
+    danke: "የቐንየለይ። መልስኻ ሰሚዐዮ።"
+    moment: "ሓንሳእ ተጸበ።"
+
+- id: kmr
+  name_eigen: "Kurmancî"
+  name_de: Kurmandschi
+  iso639_1: ku
+  rtl: false
+  status: experimentell      # Sprachenmatrix: Aussprache/Erkennung fraglich
+  varietaet_hinweis: "Kurmandschi (Nordkurdisch) in lateinischer Schrift. Nicht Sorani, keine arabische Schrift."
+  saetze:
+    begruessung: "Tu Kurmancî dixwazî? Dîsa bitikîne."
+    fehler: "Ev nebû. Dîsa bitikîne."
+    antwort_ansage: "Bersiva xwe bibêje. Tu dikarî tîp bi tîp jî bibêjî."
+    danke: "Spas. Min bersiva te bihîst."
+    moment: "Hinekî bisekine."
+
+- id: ckb
+  name_eigen: "کوردی"
+  name_de: Sorani
+  iso639_1: null
+  rtl: true
+  status: experimentell
+  varietaet_hinweis: "Sorani (Zentralkurdisch) in arabischer Schrift. Nicht Kurmandschi."
+  saetze:
+    begruessung: "کوردی دەتەوێت؟ دووبارە دابگرە."
+    fehler: "سەرکەوتوو نەبوو. دووبارە دابگرە."
+    antwort_ansage: "وەڵامەکەت بڵێ. دەتوانیت پیت بە پیتیش بیڵێیت."
+    danke: "سوپاس. وەڵامەکەتم بیست."
+    moment: "تکایە کەمێک چاوەڕێ بکە."
+
+- id: so
+  name_eigen: "Soomaali"
+  name_de: Somali
+  iso639_1: so
+  rtl: false
+  status: experimentell      # Sprachenmatrix: ein Satz falsch erkannt
+  varietaet_hinweis: "Einfaches Somali."
+  saetze:
+    begruessung: "Ma rabtaa Soomaali? Mar kale taabo."
+    fehler: "Taasi ma shaqayn. Mar kale taabo."
+    antwort_ansage: "Sheeg jawaabtaada. Waxaad sidoo kale u higgaadin kartaa xaraf xaraf."
+    danke: "Mahadsanid. Waan maqlay jawaabtaada."
+    moment: "Fadlan, in yar sug."
+
+- id: tr
+  name_eigen: "Türkçe"
+  name_de: Türkisch
+  iso639_1: tr
+  rtl: false
+  saetze:
+    begruessung: "Türkçe mi istiyorsun? Bir kez daha dokun."
+    fehler: "Olmadı. Bir kez daha dokun."
+    antwort_ansage: "Cevabını söyle. Harf harf de söyleyebilirsin."
+    danke: "Teşekkürler. Cevabını duydum."
+    moment: "Bir saniye lütfen."
+
+- id: uk
+  name_eigen: "Українська"
+  name_de: Ukrainisch
+  iso639_1: uk
+  rtl: false
+  saetze:
+    begruessung: "Хочеш українською? Торкнися ще раз."
+    fehler: "Не вийшло. Торкнися ще раз."
+    antwort_ansage: "Скажи свою відповідь. Можеш також сказати по буквах."
+    danke: "Дякую. Твою відповідь отримано."
+    moment: "Хвилинку, будь ласка."
+
+- id: ru
+  name_eigen: "Русский"
+  name_de: Russisch
+  iso639_1: ru
+  rtl: false
+  saetze:
+    begruessung: "Хочешь по-русски? Нажми ещё раз."
+    fehler: "Не получилось. Нажми ещё раз."
+    antwort_ansage: "Скажи свой ответ. Можно также по буквам."
+    danke: "Спасибо. Твой ответ получен."
+    moment: "Минутку, пожалуйста."
+
+- id: sq
+  name_eigen: "Shqip"
+  name_de: Albanisch
+  iso639_1: sq
+  rtl: false
+  saetze:
+    begruessung: "Dëshiron shqip? Prek edhe një herë."
+    fehler: "Nuk funksionoi. Prek edhe një herë."
+    antwort_ansage: "Thuaj përgjigjen tënde. Mund ta thuash edhe shkronjë për shkronjë."
+    danke: "Faleminderit. E dëgjova përgjigjen tënde."
+    moment: "Një moment, të lutem."
+
+- id: ro
+  name_eigen: "Română"
+  name_de: Rumänisch
+  iso639_1: ro
+  rtl: false
+  saetze:
+    begruessung: "Vrei în română? Atinge încă o dată."
+    fehler: "Nu a mers. Atinge încă o dată."
+    antwort_ansage: "Spune răspunsul tău. Poți să-l spui și literă cu literă."
+    danke: "Mulțumesc. Am auzit răspunsul tău."
+    moment: "Un moment, te rog."
+
+- id: en
+  name_eigen: "English"
+  name_de: Englisch
+  iso639_1: en
+  rtl: false
+  saetze:
+    begruessung: "Do you want English? Tap again."
+    fehler: "That did not work. Tap again."
+    antwort_ansage: "Say your answer. You can also spell it letter by letter."
+    danke: "Thank you. I heard your answer."
+    moment: "One moment, please."
+
+- id: fr
+  name_eigen: "Français"
+  name_de: Französisch
+  iso639_1: fr
+  rtl: false
+  saetze:
+    begruessung: "Tu veux le français ? Touche encore une fois."
+    fehler: "Ça n'a pas marché. Touche encore une fois."
+    antwort_ansage: "Dis ta réponse. Tu peux aussi l'épeler lettre par lettre."
+    danke: "Merci. J'ai entendu ta réponse."
+    moment: "Un instant, s'il te plaît."

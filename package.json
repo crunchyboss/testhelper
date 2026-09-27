@@ -1,0 +1,29 @@
+{
+  "name": "audiohelper",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host",
+    "icons": "python3 tools/make-icons.py",
+    "test": "vitest run",
+    "voice-matrix": "node tools/voice-matrix.mjs"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.11.2",
+    "idb-keyval": "^6.3.0",
+    "js-yaml": "^5.4.2",
+    "preact": "^10.29.8"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^26.6.3",
+    "fake-indexeddb": "^6.2.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.2"
+  }
+}

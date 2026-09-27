@@ -1,0 +1,61 @@
+# Beispieltest (Platzhalter): Wort-Bild-Zuordnung aus dem Alltag.
+id: wort-bild-alltag
+version: 1
+titel: "Wort und Bild verbinden"
+domaene: "Alltag"
+laslliam:
+  - "Lesen: vertraute Wörter aus dem Alltag erkennen und Bildern zuordnen"
+beschreibung_papier: |
+  Ein Blatt mit zwei Spalten. Links stehen sechs deutsche Wörter mit den Nummern 1 bis 6.
+  Rechts sind sechs Bilder mit den Buchstaben A bis F. Die Bilder sind gemischt.
+  A: ein Bus. B: ein Schlüssel. C: ein Brot. D: ein Handy. E: eine Flasche Wasser. F: ein Arzt mit weißem Kittel.
+  Die Person soll mit einem Strich jedes Wort mit dem richtigen Bild verbinden.
+hilfe:
+  erlaubt:
+    - "Die Aufgabenstellung in der Muttersprache erklären"
+    - "Sagen, was auf den Bildern zu sehen ist"
+    - "Antworten der Person bewerten"
+  verboten:
+    - "Die deutschen Wörter vorlesen oder übersetzen, denn das Lesen der Wörter wird geprüft"
+    - "Sagen, welches Wort zu welchem Bild gehört"
+  zusatz_prompt: |
+    Hier wird geprüft, ob die Person die deutschen Wörter lesen kann. Lies die Wörter deshalb NICHT vor.
+    Du darfst die Bilder beschreiben und erklären, wie man einen Strich zieht.
+# rueckmeldung_an_person: true   # optional: überschreibt flags.rueckmeldung_an_person aus app.yaml
+aufgaben:
+  - nr: 1
+    typ: zuordnung
+    text: "Wort 1: Brot"
+    erklaerung_hinweis: "Das Wort 1 mit dem passenden Bild verbinden."
+    musterloesung: "C"
+    bewertung: "Richtig ist Bild C (Brot)."
+  - nr: 2
+    typ: zuordnung
+    text: "Wort 2: Bus"
+    erklaerung_hinweis: "Das Wort 2 mit dem passenden Bild verbinden."
+    musterloesung: "A"
+    bewertung: "Richtig ist Bild A (Bus)."
+  - nr: 3
+    typ: zuordnung
+    text: "Wort 3: Arzt"
+    erklaerung_hinweis: "Das Wort 3 mit dem passenden Bild verbinden."
+    musterloesung: "F"
+    bewertung: "Richtig ist Bild F (Arzt)."
+  - nr: 4
+    typ: zuordnung
+    text: "Wort 4: Schlüssel"
+    erklaerung_hinweis: "Das Wort 4 mit dem passenden Bild verbinden."
+    musterloesung: "B"
+    bewertung: "Richtig ist Bild B (Schlüssel)."
+  - nr: 5
+    typ: zuordnung
+    text: "Wort 5: Wasser"
+    erklaerung_hinweis: "Das Wort 5 mit dem passenden Bild verbinden."
+    musterloesung: "E"
+    bewertung: "Richtig ist Bild E (Wasser)."
+  - nr: 6
+    typ: zuordnung
+    text: "Wort 6: Handy"
+    erklaerung_hinweis: "Das Wort 6 mit dem passenden Bild verbinden."
+    musterloesung: "D"
+    bewertung: "Richtig ist Bild D (Handy)."

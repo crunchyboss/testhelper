@@ -1,0 +1,55 @@
+# Beispieltest (Platzhalter). Grundregel: Alles, was auf dem Papier steht oder zu sehen ist,
+# muss hier als Text stehen, auch Bilder als Beschreibung. Das LLM kennt das Papier nur so.
+id: anmeldeformular
+version: 1
+titel: "Anmeldeformular ausfüllen"
+domaene: "Auf dem Amt"
+laslliam:
+  - "Schreiben: persönliche Angaben in ein einfaches Formular eintragen"
+beschreibung_papier: |
+  Ein Blatt mit einem einfachen Formular. Oben steht groß "Anmeldung". Daneben ein kleines Bild von einem Amt.
+  Darunter sechs Zeilen. In jeder Zeile steht links ein Wort, rechts ist eine Linie zum Schreiben.
+  Vor jeder Zeile steht eine Nummer von 1 bis 6.
+hilfe:
+  erlaubt:
+    - "Die Aufgabenstellung in der Muttersprache erklären"
+    - "Einzelne deutsche Wörter aus der Aufgabe vorsprechen und erklären"
+    - "Antworten der Person bewerten"
+  verboten:
+    - "Die Lösung vorsagen oder buchstabieren"
+    - "Persönliche Daten der Person bewerten, zum Beispiel ob der Name richtig ist"
+  zusatz_prompt: |
+    Bei Formularfeldern gibt es keine richtige Lösung. Die Person schreibt ihre eigenen Angaben.
+    Erkläre nur, WAS in das Feld gehört. Frag nicht nach den Daten der Person.
+# rueckmeldung_an_person: true   # optional: überschreibt flags.rueckmeldung_an_person aus app.yaml
+aufgaben:
+  - nr: 1
+    typ: formularfeld
+    text: "Name: ____________"
+    erklaerung_hinweis: "Hier schreibt man den Familiennamen (Nachnamen)."
+    bewertung: "Passend, wenn ein Familienname genannt wird."
+  - nr: 2
+    typ: formularfeld
+    text: "Vorname: ____________"
+    erklaerung_hinweis: "Hier schreibt man den eigenen Namen, nicht den Familiennamen."
+    bewertung: "Passend, wenn ein Vorname genannt wird."
+  - nr: 3
+    typ: formularfeld
+    text: "Straße, Hausnummer: ____________"
+    erklaerung_hinweis: "Hier schreibt man, wo man wohnt: den Namen der Straße und die Nummer vom Haus."
+    bewertung: "Passend, wenn ein Straßenname und eine Zahl genannt werden."
+  - nr: 4
+    typ: formularfeld
+    text: "PLZ, Ort: ____________"
+    erklaerung_hinweis: "PLZ heißt Postleitzahl: fünf Zahlen. Ort ist die Stadt."
+    bewertung: "Passend, wenn fünf Ziffern und ein Ortsname genannt werden."
+  - nr: 5
+    typ: formularfeld
+    text: "Geburtsdatum: ____________"
+    erklaerung_hinweis: "Der Tag, an dem man geboren ist: Tag, Monat, Jahr. Zum Beispiel 03.05.1990."
+    bewertung: "Passend, wenn ein Datum mit Tag, Monat und Jahr genannt wird."
+  - nr: 6
+    typ: formularfeld
+    text: "Unterschrift: ____________"
+    erklaerung_hinweis: "Hier unterschreibt man mit dem eigenen Namen, so wie man immer unterschreibt."
+    bewertung: "Passend, wenn die Person sagt, dass sie unterschrieben hat."

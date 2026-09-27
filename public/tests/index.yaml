@@ -1,0 +1,5 @@
+# Tests auf dem Start-Screen. kachel_nr = große Nummer auf der Kachel.
+- datei: anmeldeformular.yaml
+  kachel_nr: 1
+- datei: wort-bild-alltag.yaml
+  kachel_nr: 2
