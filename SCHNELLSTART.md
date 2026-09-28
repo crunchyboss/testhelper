@@ -8,11 +8,12 @@ Kurzanleitung für den ersten Testlauf auf dem iPad, ca. 10 Minuten. Für alle D
 - Ein OpenRouter-API-Key mit Guthaben ([openrouter.ai](https://openrouter.ai)) — für die Preview reicht ein Key mit kleinem Kreditlimit (z. B. 20 USD)
 - WLAN
 
-## 2. App öffnen und installieren
+## 2. App öffnen (und optional installieren)
 
 1. Auf dem iPad in Safari öffnen: **https://crunchyboss.github.io/testhelper/**
-2. Teilen-Icon (□ mit Pfeil nach oben) → **„Zum Home-Bildschirm“**
-3. Ab jetzt die App immer **vom Home-Bildschirm** starten, nicht aus Safari — beide haben getrennten Speicher (Key, Protokolle, Audio-Cache).
+2. *Optional:* Teilen-Icon (□ mit Pfeil nach oben) → **„Zum Home-Bildschirm“**. Ab dann die App vom Home-Bildschirm starten — Safari-Tab und Home-Bildschirm-App haben getrennten Speicher (Key, Protokolle, Audio-Cache).
+
+**Zum Testen neuer Versionen** einfach direkt in Safari bleiben und nicht installieren: ein Tab lässt sich normal neu laden, eine Home-Bildschirm-App dagegen hält die JS-Version teils fest, bis man sie komplett schließt (nach oben wischen) und neu öffnet. Die Installation erst für die eigentliche(n) Sitzung(en) machen.
 
 ## 3. API-Key einrichten
 
