@@ -640,7 +640,7 @@ button.link {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px 20px 0;
+  padding: calc(16px + env(safe-area-inset-top)) 20px 0;
   max-width: 1000px;
   margin: 0 auto;
 }
