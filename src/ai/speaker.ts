@@ -9,6 +9,9 @@ export interface TtsMetrics {
   chars: number;
   latencies: number[];
   generationIds: string[];
+  /** Resolved in the background after the turn finishes (see resolveTtsCost); undefined while still pending. */
+  cost?: number | null;
+  costSource?: 'generation-api' | 'schaetzung' | 'offen' | 'unbekannt';
 }
 
 /**

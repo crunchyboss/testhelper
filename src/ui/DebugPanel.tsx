@@ -72,7 +72,8 @@ export function DebugPanel({ metrics, liveText }: { metrics: TurnMetrics | null;
             <>
               <dt>TTS</dt>
               <dd>
-                {metrics.tts.sentences} Sätze · {metrics.tts.chars} Zeichen · je {metrics.tts.latencies.map((l) => ms(l)).join(', ')}
+                {metrics.tts.sentences} Sätze · {metrics.tts.chars} Zeichen · je {metrics.tts.latencies.map((l) => ms(l)).join(', ')} ·{' '}
+                {metrics.tts.cost === undefined ? '…' : usd(metrics.tts.cost ?? undefined)}
               </dd>
             </>
           )}

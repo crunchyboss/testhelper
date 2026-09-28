@@ -92,7 +92,13 @@ export function Task({ config, apiKey, test, language, queue, recorder, logger, 
   function log(m: TurnMetrics, sttHint: string | null = models.stt.language ?? null, recording?: Recording) {
     const ev = logger.add(eventFromMetrics(m, task.nr, sttHint));
     if (ev.tts) {
-      void resolveTtsCost(apiKey, ev.tts).then((cost) => logger.update(ev.event_id, (e) => Object.assign(e.tts!, cost)));
+      void resolveTtsCost(apiKey, ev.tts).then((cost) => {
+        logger.update(ev.event_id, (e) => Object.assign(e.tts!, cost));
+        setMetrics((prev) => {
+          if (!prev || !prev.tts || prev.tts !== m.tts) return prev;
+          return { ...prev, tts: { ...prev.tts, cost: cost.kosten_usd, costSource: cost.kosten_quelle } };
+        });
+      });
     }
     if (recording && flags.audio_aufnahmen_speichern) {
       const path = recordingPath(logger.log.session_id, ev.event_id);
