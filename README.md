@@ -3,6 +3,8 @@
 Web-App fürs iPad: begleitet gering literalisierte DaZ-Lernende per Sprache in ihrer Muttersprache
 bei Papier-Diagnostiktests. KI über OpenRouter (STT → LLM → TTS). Details: [PLAN.md](PLAN.md).
 
+**Neu hier?** → [SCHNELLSTART.md](SCHNELLSTART.md): in ca. 10 Minuten von Null zum ersten Testlauf auf dem iPad.
+
 ## Entwicklung
 
 ```bash
